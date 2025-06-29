@@ -1,12 +1,12 @@
 const navToggle = document.getElementById('navToggle');
-const navList = document.querySelector('.nav__list');
+const navList = document.getElementById('navList');
+const header = document.querySelector('.header');
 
 navToggle.addEventListener('click', () => {
   navList.classList.toggle('active');
 });
 
 window.addEventListener('scroll', () => {
-  const header = document.querySelector('.header');
   if (window.scrollY > 50) {
     header.classList.add('scrolled');
   } else {

@@ -4,6 +4,7 @@ $color-blanco: #f9fafb; // blanco suave
 $color-azul-claro: #3b82f6;
 $color-azul-oscuro: #12255a;
 $color-gris-claro: #e5e7eb;
+$color-negr-movil: #000;
 
 /* Reset básico */
 * {
@@ -203,12 +204,14 @@ header {
 
 /* Hero (inicio) */
 .hero {
+  position: relative;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
   padding: 7rem 1.5rem 3rem;
   background: linear-gradient(90deg, $color-azul 40%, $color-blanco 60%);
-  color: $color-blanco;
+  color: $color-negr-movil;
 
   .hero-text {
     max-width: 600px;
