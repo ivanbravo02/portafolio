@@ -1,14 +1,12 @@
-const hamburger = document.querySelector('.hamburger');
-const navMenu = document.querySelector('.nav-menu');
-const header = document.querySelector('header');
+const navToggle = document.getElementById('navToggle');
+const navList = document.querySelector('.nav__list');
 
-hamburger.addEventListener('click', () => {
-  navMenu.classList.toggle('open');
-  hamburger.classList.toggle('active');
+navToggle.addEventListener('click', () => {
+  navList.classList.toggle('active');
 });
 
-// Cambiar fondo del header cuando se hace scroll
 window.addEventListener('scroll', () => {
+  const header = document.querySelector('.header');
   if (window.scrollY > 50) {
     header.classList.add('scrolled');
   } else {

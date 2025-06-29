@@ -110,40 +110,96 @@ header {
   }
 }
 
-/* Menú móvil */
-@media (max-width: 768px) {
-  nav .nav-menu {
-    position: absolute;
-    top: 100%;
-    right: 0;
-    background: $color-azul;
-    flex-direction: column;
-    width: 200px;
-    border-radius: 0 0 0 10px;
-    overflow: hidden;
-    max-height: 0;
-    transition: max-height 0.3s ease;
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 45, 80, 0.8); // Azul oscuro translúcido
+  backdrop-filter: blur(8px);
+  transition: background 0.3s ease;
+  z-index: 1000;
 
-    &.open {
-      max-height: 300px; /* ajusta si tienes más links */
-    }
+  &.scrolled {
+    background: rgba(0, 45, 80, 0.95);
+  }
 
-    li a {
-      color: $color-blanco;
-      padding: 1rem;
-      display: block;
-      border-bottom: 1px solid rgba(255,255,255,0.2);
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
 
-      &:hover {
-        background: $color-azul-claro;
+  .logo a {
+    color: #ffffff;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+  }
+
+  .nav {
+    &__list {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+
+      li a {
+        color: #ffffff;
+        text-decoration: none;
+        font-weight: 500;
+        transition: color 0.3s;
+
+        &:hover {
+          color: #aad8ff;
+        }
       }
     }
   }
 
-  header .hamburger {
-    display: flex;
+  .nav-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 4px;
+    background: none;
+    border: none;
+    cursor: pointer;
+
+    span {
+      display: block;
+      width: 25px;
+      height: 3px;
+      background: #ffffff;
+      border-radius: 2px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .nav__list {
+      position: fixed;
+      top: 70px;
+      right: 0;
+      width: 200px;
+      background: rgba(0, 45, 80, 0.95);
+      flex-direction: column;
+      padding: 1rem;
+      gap: 1rem;
+      transform: translateX(100%);
+      transition: transform 0.3s ease;
+    }
+
+    .nav__list.active {
+      transform: translateX(0);
+    }
+
+    .nav-toggle {
+      display: flex;
+    }
   }
 }
+
 
 /* Hero (inicio) */
 .hero {
