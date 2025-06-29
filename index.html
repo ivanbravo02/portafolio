@@ -3,27 +3,36 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="shortcut icon" href="assets/images/mi logo2.png" type="image/x-icon">
   <title>Mi Portafolio Profesional</title>
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
 
-  <header id="header">
-    <div class="container header-container">
-      <a href="#inicio" class="logo"><img src="assets/images/mi logo2.png" style="border-radius:800px;" width="60px"></a>
-      <nav>
-        <ul class="nav-menu">
-          <li><a href="#inicio">Inicio</a></li>
-          <li><a href="#habilidades">Habilidades</a></li>
-          <li><a href="#proyectos">Proyectos</a></li>
-          <li><a href="#contacto">Contacto</a></li>
-        </ul>
-        <button class="hamburger" aria-label="Abrir menú">
-          <span></span><span></span><span></span>
-        </button>
-      </nav>
+  <header class="header">
+  <div class="container">
+    <div class="logo">
+      <a href="#">
+        <img src="assets/images/mi logo2.png" alt="logo" width="50px" style="border-radius:800px;">
+      </a>
     </div>
-  </header>
+    <nav class="nav">
+      <ul class="nav__list">
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#sobre">Sobre mí</a></li>
+        <li><a href="#habilidades">Habilidades</a></li>
+        <li><a href="#proyectos">Proyectos</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+    <button class="nav-toggle" id="navToggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+</header>
+
 
   <main>
     <!-- Sección Inicio con imagen -->
