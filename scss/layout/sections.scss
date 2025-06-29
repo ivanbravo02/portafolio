@@ -1,0 +1,73 @@
+section {
+  padding: 4rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+
+  h2 {
+    font-family: $heading-font;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: $primary-color;
+    text-align: center;
+  }
+
+  p {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+  }
+}
+
+.hero {
+  background-color: $primary-color;
+  color: #fff;
+  text-align: center;
+  padding: 6rem 2rem;
+
+  h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+  }
+
+  .btn {
+    background-color: $accent-color;
+
+    &:hover {
+      background-color: darken($accent-color, 10%);
+    }
+  }
+}
+
+.about {
+  background-color: $background-color;
+}
+
+.contact {
+  background-color: $secondary-color;
+  color: #fff;
+
+  form {
+    max-width: 600px;
+    margin: 2rem auto 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    input,
+    textarea {
+      padding: 0.75rem;
+      border: none;
+      border-radius: 4px;
+      font-size: 1rem;
+    }
+
+    button {
+      align-self: center;
+    }
+  }
+}

@@ -1,0 +1,297 @@
+@charset "UTF-8";
+/* Variables de color */
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: #f9fafb;
+  color: #12255a;
+  line-height: 1.6;
+}
+
+a {
+  color: #3b82f6;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* Header */
+header {
+  position: fixed;
+  width: 100%;
+  background: transparent;
+  transition: background-color 0.3s ease;
+  z-index: 1000;
+}
+header.scrolled {
+  background-color: rgba(28, 28, 29, 0.9);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+header .header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+}
+header .header-container .logo {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #1e40af;
+  cursor: pointer;
+}
+header .header-container nav {
+  position: relative;
+}
+header .header-container nav .nav-menu {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+header .header-container nav .nav-menu li a {
+  font-weight: 600;
+  color: #12255a;
+  padding: 0.3rem 0.5rem;
+  transition: color 0.3s ease;
+}
+header .header-container nav .nav-menu li a:hover {
+  color: #3b82f6;
+}
+header .header-container nav .hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
+}
+header .header-container nav .hamburger span {
+  width: 25px;
+  height: 3px;
+  background: #12255a;
+  margin-bottom: 5px;
+  border-radius: 2px;
+  transition: 0.3s;
+}
+header .header-container nav .hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+header .header-container nav .hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+header .header-container nav .hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Menú móvil */
+@media (max-width: 768px) {
+  nav .nav-menu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: #1e40af;
+    flex-direction: column;
+    width: 200px;
+    border-radius: 0 0 0 10px;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.3s ease;
+  }
+  nav .nav-menu.open {
+    max-height: 300px; /* ajusta si tienes más links */
+  }
+  nav .nav-menu li a {
+    color: #f9fafb;
+    padding: 1rem;
+    display: block;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  nav .nav-menu li a:hover {
+    background: #3b82f6;
+  }
+  header .hamburger {
+    display: flex;
+  }
+}
+/* Hero (inicio) */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 7rem 1.5rem 3rem;
+  background: linear-gradient(90deg, #1e40af 40%, #f9fafb 60%);
+  color: #f9fafb;
+}
+.hero .hero-text {
+  max-width: 600px;
+}
+.hero .hero-text h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+.hero .hero-text p {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+}
+.hero .hero-text .btn-primary {
+  display: inline-block;
+  background: #f9fafb;
+  color: #1e40af;
+  padding: 0.75rem 1.5rem;
+  font-weight: 700;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.3);
+  transition: background-color 0.3s ease;
+}
+.hero .hero-text .btn-primary:hover {
+  background: white;
+}
+.hero .hero-image {
+  max-width: 350px;
+}
+.hero .hero-image img {
+  width: 100%;
+  border-radius: 50%;
+  border: 5px solid #f9fafb;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 900px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+  .hero .hero-text {
+    max-width: 100%;
+    margin-bottom: 2rem;
+  }
+}
+/* Sección habilidades */
+.habilidades {
+  background: #f9fafb;
+  padding: 3rem 1.5rem;
+}
+.habilidades h2 {
+  color: #12255a;
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+}
+.habilidades .skills-list {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.habilidades .skills-list .skill-card {
+  background: #3b82f6;
+  color: #f9fafb;
+  padding: 1.5rem;
+  border-radius: 8px;
+  flex: 1 1 220px;
+  box-shadow: 0 4px 8px rgba(30, 64, 175, 0.3);
+  cursor: default;
+  transition: transform 0.3s ease;
+}
+.habilidades .skills-list .skill-card:hover, .habilidades .skills-list .skill-card:focus {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(30, 64, 175, 0.6);
+  outline: none;
+}
+.habilidades .skills-list .skill-card h3 {
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+.habilidades .skills-list .skill-card p {
+  font-size: 0.95rem;
+}
+
+/* Sección proyectos */
+.proyectos {
+  background: #e5e7eb;
+  padding: 3rem 1.5rem;
+}
+.proyectos h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #12255a;
+  font-size: 2rem;
+}
+.proyectos .project-list {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.proyectos .project-list .project-card {
+  background: #f9fafb;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 8px rgba(30, 64, 175, 0.15);
+  flex: 1 1 280px;
+  cursor: default;
+  transition: box-shadow 0.3s ease;
+}
+.proyectos .project-list .project-card:hover, .proyectos .project-list .project-card:focus {
+  box-shadow: 0 10px 20px rgba(30, 64, 175, 0.4);
+  outline: none;
+}
+.proyectos .project-list .project-card h3 {
+  margin-bottom: 0.5rem;
+  color: #12255a;
+}
+.proyectos .project-list .project-card p {
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+}
+.proyectos .project-list .project-card a {
+  font-weight: 600;
+  color: #3b82f6;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.3s ease;
+}
+.proyectos .project-list .project-card a:hover {
+  border-color: #3b82f6;
+}
+
+/* Sección contacto */
+.contacto {
+  padding: 3rem 1.5rem;
+  background: #f9fafb;
+  text-align: center;
+}
+.contacto h2 {
+  color: #12255a;
+  margin-bottom: 1rem;
+}
+.contacto p {
+  font-size: 1rem;
+}
+
+/*# sourceMappingURL=styles.css.map */
+.btn-contacto {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007BFF; /* azul */
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-contacto:hover {
+  background-color: #0056b3;
+}
