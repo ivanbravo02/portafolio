@@ -8,44 +8,41 @@
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
-
-  <header class="header">
-  <div class="container">
-    <div class="logo">
-      <a href="#inicio">
-        <img src="assets/images/mi logo2.png" alt="logo" width="50px" style="border-radius:800px;">
-      </a>
+  <!-- Header con backdrop-filter y sticky -->
+  <header class="header" id="header">
+    <div class="container">
+      <div class="logo">
+        <a href="#inicio">
+          <img src="assets/images/mi logo2.png" alt="Logo de Josue Ivan" width="50" style="border-radius:800px;">
+        </a>
+      </div>
+      <nav>
+        <ul class="nav__list" id="navList">
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#habilidades">Habilidades</a></li>
+          <li><a href="#proyectos">Proyectos</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+        <button class="nav-toggle" id="navToggle" aria-label="Abrir menú de navegación" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </nav>
     </div>
-    <nav class="nav">
-      <ul class="nav__list" id="navList">
-        <li><a href="#inicio">Inicio</a></li>
-        <li><a href="#habilidades">Habilidades</a></li>
-        <li><a href="#proyectos">Proyectos</a></li>
-        <li><a href="#contacto">Contacto</a></li>
-      </ul>
-    </nav>
-    <button class="nav-toggle" id="navToggle">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
-  </div>
-</header>
-
+  </header>
 
   <main>
-    <!-- Sección Inicio con imagen -->
-    <section id="inicio" class="section hero">
+    <!-- Hero -->
+    <section id="inicio" class="hero section">
       <div class="hero-text">
         <h1>Hola, soy Josue Ivan Moreno Bravo</h1>
-        <p>Técnico Superior Universitario en Desarrollo de Software Multiplataforma, con experiencia práctica en 
-          desarrollo web utilizando WordPress y Elementor, así como en la validación y mantenimiento de plataformas digitales.
-        </p>
+        <p>Técnico Superior Universitario en Desarrollo de Software Multiplataforma, con experiencia en desarrollo web con WordPress, Elementor y mantenimiento de plataformas digitales.</p>
         <a href="#proyectos" class="btn-primary">Ver mis proyectos</a>
       </div>
     </section>
 
-    <!-- Sección Habilidades -->
+    <!-- Habilidades -->
     <section id="habilidades" class="section habilidades">
       <h2>Mis Habilidades</h2>
       <div class="skills-list">
@@ -55,85 +52,73 @@
         </div>
         <div class="skill-card" tabindex="0">
           <h3>JavaScript & React</h3>
-          <p>Desarrollo de proyectos web interactivas con React, Vite y mongoDB.</p>
+          <p>Desarrollo web interactivo con React, Vite y MongoDB.</p>
         </div>
         <div class="skill-card" tabindex="0">
           <h3>Git & GitHub</h3>
-          <p>Manejo de versiones, comandos basicos de git y despliegue de Github.</p>
+          <p>Control de versiones, flujos de trabajo y despliegues en GitHub.</p>
         </div>
         <div class="skill-card" tabindex="0">
-          <h3>Data Bases</h3>
-          <p>Desarrollo de paginas web con MongoDB, MySQL y phpmyAdmin.</p>
+          <h3>Bases de Datos</h3>
+          <p>Experiencia con MongoDB, MySQL y phpMyAdmin.</p>
         </div>
-      </div>
-    </section>
-
-    <!-- Sección Habilidades -->
-    <section id="habilidades" class="section habilidades">
-      <div class="skills-list">
         <div class="skill-card" tabindex="0">
-          <h3>Mantenimiento preventivo</h3>
-          <p>Conociminetos basicos en los procesos de mantenimiento preventivo en equipos de computo.</p>
+          <h3>Mantenimiento Preventivo</h3>
+          <p>Conocimientos básicos en mantenimiento de equipos de cómputo.</p>
         </div>
         <div class="skill-card" tabindex="0">
           <h3>Redes</h3>
-          <p>Comprension basica sobre la instalacion y configuracion de redes.</p>
+          <p>Instalación y configuración básica de redes.</p>
         </div>
         <div class="skill-card" tabindex="0">
           <h3>Project Manager</h3>
-          <p>Manejo de herramientas de colaboracion como Asana y Trello.</p>
+          <p>Uso de herramientas colaborativas como Asana y Trello.</p>
         </div>
       </div>
     </section>
 
-    <!-- Sección Proyectos con cards -->
+    <!-- Proyectos -->
     <section id="proyectos" class="section proyectos">
       <h2>Proyectos Destacados</h2>
       <div class="project-list">
         <div class="project-card" tabindex="0">
           <h3>Dados-JIMB</h3>
-          <p>Sitio web desarrollado como parte de enseñansa escolar.</p>
-          <a href="https://dados-jimb.netlify.app/" target="_blank" rel="noopener">Ver</a>
+          <p>Sitio web educativo para aprender lógica de dados.</p>
+          <a href="https://dados-jimb.netlify.app/" target="_blank" rel="noopener">Ver proyecto</a>
         </div>
         <div class="project-card" tabindex="0">
           <h3>Tareas-JIMB</h3>
-          <p>Aplicación web que permite escribir una lista de tareas, realizada durante mi formacion.</p>
-          <a href="https://tareas-jimb.netlify.app/" target="_blank" rel="noopener">Ver</a>
+          <p>Aplicación web para gestionar tareas diarias.</p>
+          <a href="https://tareas-jimb.netlify.app/" target="_blank" rel="noopener">Ver proyecto</a>
         </div>
         <div class="project-card" tabindex="0">
           <h3>ComvertidorJIMB</h3>
-          <p>Proyecto de conversion de monedas realizado con el framework de Angular.</p>
-          <a href="https://convertidor-jimb.netlify.app/" target="_blank" rel="noopener">Ver</a>
+          <p>Conversor de monedas desarrollado en Angular.</p>
+          <a href="https://convertidor-jimb.netlify.app/" target="_blank" rel="noopener">Ver proyecto</a>
         </div>
-      </div>
-    </section>
-
-    <!-- Sección Proyectos con cards -->
-    <section id="proyectos" class="section proyectos">
-      <div class="project-list">
         <div class="project-card" tabindex="0">
           <h3>ConsumidorApiJIMB</h3>
-          <p>Sitio web desarrollado con el fin de comprender como se consume la informacion de una Api.</p>
-          <a href="https://consumirapi-jimb.netlify.app/" target="_blank" rel="noopener">Ver</a>
+          <p>Proyecto para consumir datos desde una API REST.</p>
+          <a href="https://consumirapi-jimb.netlify.app/" target="_blank" rel="noopener">Ver proyecto</a>
         </div>
         <div class="project-card" tabindex="0">
           <h3>Tienda</h3>
-          <p>Tienda web desarrollada con la finalidad de aprender bien el manejo de HTML5, CSS y JS.</p>
-          <a href="https://tiendajbprivatechef.netlify.app/" target="_blank" rel="noopener">Ver</a>
+          <p>Tienda online con HTML5, CSS y JS puro.</p>
+          <a href="https://tiendajbprivatechef.netlify.app/" target="_blank" rel="noopener">Ver proyecto</a>
         </div>
         <div class="project-card" tabindex="0">
-          <h3>Gestion escolar</h3>
-          <p>Proyecto donde puse en practica las tecnologias de HTML5, SweetAlert, ChartJs, Xamp, phpmyAdmin, asi como
-            PHP y metodos de encriptacion de contraseñas.</p>
-          <a href="https://github.com/ivanbravo02/gestionescolar" target="_blank" rel="noopener">Ver</a>
+          <h3>Gestión Escolar</h3>
+          <p>App completa con HTML5, SweetAlert, ChartJs, XAMPP, phpMyAdmin y PHP (incluyendo login con hash).</p>
+          <a href="https://github.com/ivanbravo02/gestionescolar" target="_blank" rel="noopener">Ver proyecto</a>
         </div>
       </div>
     </section>
 
-    <!-- Sección Contacto -->
+    <!-- Contacto -->
     <section id="contacto" class="section contacto">
-      <h2>¡ Contactame !</h2>
-      <a class="btn-contacto" href="https://www.linkedin.com/in/josué-ivan-moreno-bravo-915423289/" target="_blank"> Linkedin</a>
+      <h2>¡Contáctame!</h2>
+      <a class="btn-links" href="https://www.linkedin.com/in/josué-ivan-moreno-bravo-915423289/" target="_blank">LinkedIn</a>
+      <a class="btn-links" href="mailto:a3522110075@alumno.uttehuacan.edu.mx" target="_blank">Correo</a>
     </section>
   </main>
 
